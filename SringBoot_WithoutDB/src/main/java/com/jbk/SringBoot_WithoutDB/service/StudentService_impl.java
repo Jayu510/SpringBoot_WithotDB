@@ -21,5 +21,31 @@ private StudentDao dao;
 		// TODO Auto-generated method stub
 		return dao.getAllStudent();
 	}
+	@Override
+	public Student getStudent(int eid) {
+		
+		return dao.getStudent(eid);
+	}
+	@Override
+	public String updateStudent(Student student) {
+		
+		return dao.updateStudent(student);
+	}
+	@Override
+	public String deleteStudent(int eid) {
+		String msg=dao.deleteStudent(eid);
+		return msg;
+	}
+	@Override
+	public List<Student> sortStudentonMarks() {
+		List<Student>list=dao.sortStudentonMarks();
+		return list;
+	}
+	@Override
+	public List<Student> sortStudentonName() {
+		List<Student>list=dao.sortStudentonName();
+		return list;
+	}
+	
 
 }

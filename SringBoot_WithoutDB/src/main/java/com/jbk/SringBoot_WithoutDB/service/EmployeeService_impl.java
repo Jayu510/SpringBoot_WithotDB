@@ -36,7 +36,7 @@ public class EmployeeService_impl implements EmployeeService {
 		@Override
 		public String deleteEmployee(int eid) {
 			String msg = dao.deleteEmployee(eid);
-			return null;
+			return msg;
 		}
 		@Override
 		public List<Employee> sortEmployeeOnSalary() {

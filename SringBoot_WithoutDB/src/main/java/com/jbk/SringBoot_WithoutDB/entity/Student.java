@@ -1,20 +1,29 @@
 package com.jbk.SringBoot_WithoutDB.entity;
 
 public class Student {
+
+	private int eid;
 	private String name;
-	private int id;
-	private float marks;
+	private double marks;
 
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Student(String name, int id, float marks) {
+	public Student(int eid, String name, double marks) {
 		super();
+		this.eid = eid;
 		this.name = name;
-		this.id = id;
 		this.marks = marks;
+	}
+
+	public int getEid() {
+		return eid;
+	}
+
+	public void setEid(int eid) {
+		this.eid = eid;
 	}
 
 	public String getName() {
@@ -25,25 +34,17 @@ public class Student {
 		this.name = name;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public float getMarks() {
+	public double getMarks() {
 		return marks;
 	}
 
-	public void setMarks(float marks) {
+	public void setMarks(double marks) {
 		this.marks = marks;
 	}
 
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", id=" + id + ", marks=" + marks + "]";
+		return "Student [eid=" + eid + ", name=" + name + ", marks=" + marks + "]";
 	}
 
 }
